@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "dependencyDashboard": false,
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "prBodyTemplate": "{{{header}}}{{{table}}}{{{warnings}}}{{{notes}}}{{{changelogs}}}\n- [ ] Checklist A\n- [ ] Checklist B\n{{{footer}}}",
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["*"],
+      "enabled": false
+    },
+    {
+      "matchFileNames": ["overlays/prod/kustomization.yaml"],
+      "matchPackagePatterns": ["*"],
+      "enabled": true
+    }
+  ]
+}
